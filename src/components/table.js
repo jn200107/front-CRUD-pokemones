@@ -23,7 +23,7 @@ const TableDense=()=>{
 
   let getData=async()=>{
     try {
-      const {data: response}=await axios.get('http://localhost:3007/pokemones')
+      const {data: response}=await axios.get('http://localhost:3008/pokemones')
       setData(response)
     } catch(error){
       console.log(error.message)
@@ -42,7 +42,7 @@ const TableDense=()=>{
       setshowAlert(true)
     }else{
       if (!showForm){
-      axios.post('http://localhost:3007/agregar-pokemon',{
+      axios.post('http://localhost:3008/agregar-pokemon',{
         nombre:nombre,
         tipo:tipo
       }).then(response=>{
@@ -63,7 +63,7 @@ const TableDense=()=>{
       setnombre(event.target.value)
   }
   const onchangetipo=(event)=>{
-     settipo(event.target.value)  
+    settipo(event.target.value)  
   }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -88,7 +88,7 @@ const TableDense=()=>{
     if(nombre==='' || tipo===''){
       setshowAlert(true)
     }else{
-    axios.put(`http://localhost:3007/actualizar-pokemon/${id}`,{
+    axios.put(`http://localhost:3008/actualizar-pokemon/${id}`,{
       nombre:nombre,
       tipo:tipo
     }).then(()=>{

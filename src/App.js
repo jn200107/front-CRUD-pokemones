@@ -4,24 +4,13 @@ import Box from '@mui/material/Box';
 
 
 
-
-
-
-
-
-
-
 const App=()=>{
   return(
-    <Box sx={{p:2,height:1000,backgroundColor:'#D4D4D4'}}>
-
+    <Box sx={{p:2,height:800,backgroundColor:'#D4D4D4'}}>
       <Grid container justifyContent={'center'} >
         <Table></Table>
       </Grid>    
-
-
     </Box>
-  
   )
 }
 
